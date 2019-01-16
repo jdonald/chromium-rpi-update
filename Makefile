@@ -36,7 +36,7 @@ $(RASPBIAN_CHROMIUM_BROWSER): $(CHROMIUM_BROWSER) $(LIBC)
 	mkdir -p .browser-tmp
 	cd .browser-tmp && \
 	  ar x ../$(LIBC) && \
-	  tar xf data.tar.xz lib/arm-linux-gnueabihf/libm.so.6 lib/arm-linux-gnueabihf/libm-2.28.so && \
+	  tar xf data.tar.xz ./lib/arm-linux-gnueabihf/libm.so.6 ./lib/arm-linux-gnueabihf/libm-2.28.so && \
 	  ar x ../$<
 	cd .browser-tmp && \
 	  tar xf control.tar.xz && \
