@@ -16,4 +16,4 @@ Then try it out:
 
     chromium-browser --version
 
-and it should say something like `Chromium 1.0.3578.98 Built on Ubuntu , running on Raspbian 9.6`
+and it should say something like `Chromium 71.0.3578.98 Built on Ubuntu , running on Raspbian 9.6`
