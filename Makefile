@@ -36,15 +36,16 @@ $(RASPBIAN_CHROMIUM_BROWSER): $(CHROMIUM_BROWSER) $(LIBC)
 	mkdir -p .browser-tmp
 	cd .browser-tmp && \
 	  ar x ../$(LIBC) && \
-	  tar xf data.tar.xz lib/arm-linux-gnueabihf/libm.so.6 && \
+	  tar xf data.tar.xz lib/arm-linux-gnueabihf/libm.so.6 lib/arm-linux-gnueabihf/libm-2.28.so && \
 	  ar x ../$<
 	cd .browser-tmp && \
 	  tar xf control.tar.xz && \
 	  sed -i.bak 's/0ubuntu0.18.04.1/0ubuntu0.18.04.1+rpi1/; s/ 2.27)/ 2.24)/' control && \
-	  tar cf control.tar.xz conffiles control md5sums postinst prerm
+	  tar cJf control.tar.xz conffiles control md5sums postinst prerm
 	cd .browser-tmp && \
 	  tar xf data.tar.xz && \
 	  mv lib/arm-linux-gnueabihf/libm.so.6 usr/lib/chromium-browser && \
+	  mv lib/arm-linux-gnueabihf/libm-2.28.so usr/lib/chromium-browser && \
 	  tar cJf data.tar.xz etc usr && \
 	  ar cr ../$@ debian-binary control.tar.xz data.tar.xz
 
