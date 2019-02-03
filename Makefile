@@ -3,7 +3,7 @@ LIBC_DIR = http://http.us.debian.org/debian/pool/main/g/glibc
 
 CHROMIUM_BROWSER = chromium-browser_71.0.3578.98-0ubuntu0.18.04.1_armhf.deb
 CHROMIUM_CODECS = chromium-codecs-ffmpeg-extra_71.0.3578.98-0ubuntu0.18.04.1_armhf.deb
-LIBC = libc6_2.28-4_armhf.deb
+LIBC = libc6_2.28-5_armhf.deb
 RASPBIAN_CHROMIUM_BROWSER = $(subst _armhf,+rpi1_armhf,$(CHROMIUM_BROWSER))
 RASPBIAN_CHROMIUM_CODECS = $(subst _armhf,+rpi1_armhf,$(CHROMIUM_CODECS))
 
