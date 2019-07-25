@@ -1,8 +1,8 @@
-BIONIC_DIR = https://launchpad.net/~canonical-chromium-builds/+archive/ubuntu/stage/+build/16422997/+files
+BIONIC_DIR = https://launchpad.net/~canonical-chromium-builds/+archive/ubuntu/stage/+build/17277616/+files
 LIBC_DIR = https://snapshot.debian.org/archive/debian/20190701T031013Z/pool/main/g/glibc
 
-CHROMIUM_BROWSER = chromium-browser_72.0.3626.119-0ubuntu0.18.04.1_armhf.deb
-CHROMIUM_CODECS = chromium-codecs-ffmpeg-extra_72.0.3626.119-0ubuntu0.18.04.1_armhf.deb
+CHROMIUM_BROWSER = chromium-browser_75.0.3770.142-0ubuntu0.18.04.1_armhf.deb
+CHROMIUM_CODECS = chromium-codecs-ffmpeg-extra_75.0.3770.142-0ubuntu0.18.04.1_armhf.deb
 LIBC = libc6_2.28-10_armhf.deb
 RASPBIAN_CHROMIUM_BROWSER = $(subst _armhf,+rpi1_armhf,$(CHROMIUM_BROWSER))
 RASPBIAN_CHROMIUM_CODECS = $(subst _armhf,+rpi1_armhf,$(CHROMIUM_CODECS))
@@ -13,13 +13,13 @@ all: $(RASPBIAN_CHROMIUM_BROWSER) $(RASPBIAN_CHROMIUM_CODECS)
 	@echo "    $(RASPBIAN_CHROMIUM_CODECS)"
 
 $(LIBC):
-	wget $(LIBC_DIR)/$(LIBC)
+	curl -O -L $(LIBC_DIR)/$(LIBC)
 
 $(CHROMIUM_BROWSER):
-	wget $(BIONIC_DIR)/$(CHROMIUM_BROWSER)
+	curl -O -L $(BIONIC_DIR)/$(CHROMIUM_BROWSER)
 
 $(CHROMIUM_CODECS):
-	wget $(BIONIC_DIR)/$(CHROMIUM_CODECS)
+	curl -O -L $(BIONIC_DIR)/$(CHROMIUM_CODECS)
 
 # Downgrade libc dependency to 2.24, tag with +rpi1 suffix
 $(RASPBIAN_CHROMIUM_CODECS): $(CHROMIUM_CODECS)

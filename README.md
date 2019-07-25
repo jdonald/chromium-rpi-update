@@ -16,4 +16,13 @@ Then try it out:
 
     chromium-browser --version
 
-and it should say something like `Chromium 71.0.3578.98 Built on Ubuntu , running on Raspbian 9.6`
+and it should say something like `Chromium 75.0.3770.142 Built on Ubuntu , running on Raspbian 9.6`
+
+On Raspbian Buster they're back to keeping Chromium current so this
+becomes less relevant, unless they happen to fall behind again.
+
+To update this repo anytime there's a new version of Chromium
+it's not that hard. Go to
+https://launchpad.net/~canonical-chromium-builds/+archive/ubuntu/stage
+and click around to find links to the two relevant \*.deb files, then
+update paths accordingly in `Makefile`.
