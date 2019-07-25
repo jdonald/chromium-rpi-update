@@ -23,7 +23,7 @@ becomes less relevant, unless they happen to fall behind again.
 
 To update this repo anytime there's a new version of Chromium
 it's not that hard. Go to
-https://launchpad.net/~canonical-chromium-builds/+archive/ubuntu/stage
-and click around to find links to the two relevant \*.deb files, then
-update paths accordingly in `Makefile`. Please file a pull request
-with your changes so that everyone can benefit.
+https://launchpad.net/~canonical-chromium-builds/+archive/ubuntu/stage/+packages
+and click through to find links to the two relevant 18.04 armhf
+\*.deb files, then update paths accordingly in `Makefile`. Please
+file a pull request with your changes so that everyone can benefit.
