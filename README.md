@@ -12,6 +12,11 @@ On your Raspbian Stretch system, install the repackaged Chromium:
 
     sudo dpkg --install chromium*rpi1_armhf.deb
 
+If you get any package version conflicts with `chromium-browser-l10n`
+and are fine all-English, remove the l10n package:
+
+    sudo apt remove chromium-browser-l10n
+
 Then try it out:
 
     chromium-browser --version
