@@ -1,5 +1,5 @@
 BIONIC_DIR = https://launchpad.net/~canonical-chromium-builds/+archive/ubuntu/stage/+build/16422997/+files
-LIBC_DIR = http://http.us.debian.org/debian/pool/main/g/glibc
+LIBC_DIR = https://snapshot.debian.org/archive/debian/20181229T221753Z/pool/main/g/glibc
 
 CHROMIUM_BROWSER = chromium-browser_72.0.3626.119-0ubuntu0.18.04.1_armhf.deb
 CHROMIUM_CODECS = chromium-codecs-ffmpeg-extra_72.0.3626.119-0ubuntu0.18.04.1_armhf.deb
